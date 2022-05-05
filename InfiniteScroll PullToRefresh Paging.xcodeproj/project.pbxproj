@@ -13,6 +13,18 @@
 		9C1149EB2824550B003304CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1149E92824550B003304CD /* Main.storyboard */; };
 		9C1149ED2824550C003304CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1149EC2824550C003304CD /* Assets.xcassets */; };
 		9C1149F02824550C003304CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1149EE2824550C003304CD /* LaunchScreen.storyboard */; };
+		9C1149FD2824560D003304CD /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1149FC2824560D003304CD /* PullToRefreshView.swift */; };
+		9C1149FF2824561B003304CD /* PullToRefreshViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1149FE2824561B003304CD /* PullToRefreshViewModel.swift */; };
+		9C114A0128245621003304CD /* PullToRefreshModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A0028245621003304CD /* PullToRefreshModel.swift */; };
+		9C114A0328245635003304CD /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A0228245635003304CD /* InfiniteScrollView.swift */; };
+		9C114A052824563E003304CD /* InfiniteScrollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A042824563E003304CD /* InfiniteScrollViewModel.swift */; };
+		9C114A072824564A003304CD /* InfiniteScrollModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A062824564A003304CD /* InfiniteScrollModel.swift */; };
+		9C114A092824565F003304CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A082824565F003304CD /* HomeView.swift */; };
+		9C114A0B28245665003304CD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A0A28245665003304CD /* HomeViewModel.swift */; };
+		9C114A0D2824566F003304CD /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A0C2824566F003304CD /* HomeModel.swift */; };
+		9C114A0F28245677003304CD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A0E28245677003304CD /* ProfileView.swift */; };
+		9C114A112824568E003304CD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A102824568E003304CD /* ProfileViewModel.swift */; };
+		9C114A1328245697003304CD /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A1228245697003304CD /* ProfileModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,18 @@
 		9C1149EC2824550C003304CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C1149EF2824550C003304CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C1149F12824550C003304CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C1149FC2824560D003304CD /* PullToRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
+		9C1149FE2824561B003304CD /* PullToRefreshViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefreshViewModel.swift; sourceTree = "<group>"; };
+		9C114A0028245621003304CD /* PullToRefreshModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefreshModel.swift; sourceTree = "<group>"; };
+		9C114A0228245635003304CD /* InfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
+		9C114A042824563E003304CD /* InfiniteScrollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollViewModel.swift; sourceTree = "<group>"; };
+		9C114A062824564A003304CD /* InfiniteScrollModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollModel.swift; sourceTree = "<group>"; };
+		9C114A082824565F003304CD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9C114A0A28245665003304CD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9C114A0C2824566F003304CD /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		9C114A0E28245677003304CD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		9C114A102824568E003304CD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		9C114A1228245697003304CD /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,8 @@
 		9C1149E22824550B003304CD /* InfiniteScroll PullToRefresh Paging */ = {
 			isa = PBXGroup;
 			children = (
+				9C114A14282456A9003304CD /* Network */,
+				9C1149F72824552B003304CD /* Screens */,
 				9C1149E32824550B003304CD /* AppDelegate.swift */,
 				9C1149E52824550B003304CD /* SceneDelegate.swift */,
 				9C1149E72824550B003304CD /* ViewController.swift */,
@@ -65,6 +91,64 @@
 				9C1149F12824550C003304CD /* Info.plist */,
 			);
 			path = "InfiniteScroll PullToRefresh Paging";
+			sourceTree = "<group>";
+		};
+		9C1149F72824552B003304CD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9C1149FB282455DF003304CD /* PullToRefresh */,
+				9C1149FA28245576003304CD /* InfiniteScroll */,
+				9C1149F828245534003304CD /* Home */,
+				9C1149F92824554E003304CD /* Profile */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
+		9C1149F828245534003304CD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9C114A082824565F003304CD /* HomeView.swift */,
+				9C114A0A28245665003304CD /* HomeViewModel.swift */,
+				9C114A0C2824566F003304CD /* HomeModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9C1149F92824554E003304CD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9C114A0E28245677003304CD /* ProfileView.swift */,
+				9C114A102824568E003304CD /* ProfileViewModel.swift */,
+				9C114A1228245697003304CD /* ProfileModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		9C1149FA28245576003304CD /* InfiniteScroll */ = {
+			isa = PBXGroup;
+			children = (
+				9C114A0228245635003304CD /* InfiniteScrollView.swift */,
+				9C114A042824563E003304CD /* InfiniteScrollViewModel.swift */,
+				9C114A062824564A003304CD /* InfiniteScrollModel.swift */,
+			);
+			path = InfiniteScroll;
+			sourceTree = "<group>";
+		};
+		9C1149FB282455DF003304CD /* PullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				9C1149FC2824560D003304CD /* PullToRefreshView.swift */,
+				9C1149FE2824561B003304CD /* PullToRefreshViewModel.swift */,
+				9C114A0028245621003304CD /* PullToRefreshModel.swift */,
+			);
+			name = PullToRefresh;
+			sourceTree = "<group>";
+		};
+		9C114A14282456A9003304CD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +222,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C114A1328245697003304CD /* ProfileModel.swift in Sources */,
+				9C1149FF2824561B003304CD /* PullToRefreshViewModel.swift in Sources */,
+				9C114A0F28245677003304CD /* ProfileView.swift in Sources */,
+				9C114A0B28245665003304CD /* HomeViewModel.swift in Sources */,
+				9C114A052824563E003304CD /* InfiniteScrollViewModel.swift in Sources */,
+				9C114A0328245635003304CD /* InfiniteScrollView.swift in Sources */,
+				9C114A092824565F003304CD /* HomeView.swift in Sources */,
+				9C114A112824568E003304CD /* ProfileViewModel.swift in Sources */,
+				9C114A0128245621003304CD /* PullToRefreshModel.swift in Sources */,
+				9C1149FD2824560D003304CD /* PullToRefreshView.swift in Sources */,
 				9C1149E82824550B003304CD /* ViewController.swift in Sources */,
+				9C114A0D2824566F003304CD /* HomeModel.swift in Sources */,
 				9C1149E42824550B003304CD /* AppDelegate.swift in Sources */,
 				9C1149E62824550B003304CD /* SceneDelegate.swift in Sources */,
+				9C114A072824564A003304CD /* InfiniteScrollModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
