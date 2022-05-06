@@ -152,10 +152,10 @@
 		9C114A14282456A9003304CD /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				9C114A15282507A3003304CD /* NetworkService.swift */,
-				9C114A17282507BF003304CD /* RandomUsersDTO.swift */,
 				9C114A19282507F8003304CD /* Endpoints.swift */,
 				9C114A1B282510CE003304CD /* ClientNetworkService.swift */,
+				9C114A15282507A3003304CD /* NetworkService.swift */,
+				9C114A17282507BF003304CD /* RandomUsersDTO.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";

@@ -7,8 +7,9 @@
 
 import Foundation
 
-let appContainer = AppContainer()
+let appContainer = AppContainer() // Bu kullanım nasıl? Dışarda olması ve instanceları aynı yerde olusturmak?
 
 class AppContainer {
     let router = AppRouter()
+    let service: ClientNetworkService = ClientNetworkService()
 }
