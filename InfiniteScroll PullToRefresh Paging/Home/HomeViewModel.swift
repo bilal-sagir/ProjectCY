@@ -31,9 +31,9 @@ class HomeViewModel: HomeViewModelProtocol {
     
     var delegate: HomeViewModelDelegate?
     
-    var listItems = ["Infinite Scroll", "Pull To Refresh", "Combined"]
+    var listItems = ["Infinite Scroll", "Pull To Refresh", "Combined"] // bu static işleri burda yapmak dogru mu?
     
-    var viewTitle = "Home"
+    var viewTitle = "Home" // bu static işleri burda yapmak dogru mu?
     
     func didSelectRow(indexpath: IndexPath) {
 

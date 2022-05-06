@@ -7,8 +7,8 @@
 
 import Foundation
 
-protocol ClientNetworkServiceProtocol {
-    func users(completion: @escaping (RandomUsersDTO?, NetworkError?) -> Void)
+protocol ClientNetworkServiceProtocol { // Bu yaklaşımı da sor
+    func fetchUsers(completion: @escaping (RandomUsersDTO?, NetworkError?) -> Void)
 }
 
 class ClientNetworkService: ClientNetworkServiceProtocol {
@@ -18,7 +18,7 @@ class ClientNetworkService: ClientNetworkServiceProtocol {
 
     private let networkService: NetworkServiceProtocol = NetworkService()
 
-    func users(completion: @escaping (RandomUsersDTO?, NetworkError?) -> Void) {
+    func fetchUsers(completion: @escaping (RandomUsersDTO?, NetworkError?) -> Void) {
         let urlString = Endpoints.userCount.rawValue
         networkService.get(from: urlString, completion: completion)
     }

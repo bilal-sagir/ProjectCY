@@ -11,6 +11,9 @@ import UIKit
 class InfiniteScrollView: UIViewController {
 
     //MARK: - Variables
+    
+    var viewModel: InfiniteScrollViewModelProtocol!
+    
     private let tableView: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self,
@@ -22,6 +25,7 @@ class InfiniteScrollView: UIViewController {
     //MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = InfiniteScrollViewModel(service: appContainer.service) // TODO: burayı inject ediceksin unutma
         
         configureUI()
     }
@@ -33,6 +37,16 @@ class InfiniteScrollView: UIViewController {
         tableView.dataSource = self
         view.addSubview(tableView)
         self.title = "Infinite ScrollView"
+        
+        viewModel.delegate = self
+        viewModel.viewDidLoad()
+    }
+}
+
+//MARK: - viewModel Delegation
+extension InfiniteScrollView: InfiniteScrollViewModelDelegate {
+    func updateTableView() {
+        self.tableView.reloadData()
     }
 }
 
@@ -44,12 +58,15 @@ extension InfiniteScrollView: UITableViewDelegate, UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return viewModel.usersA?.count ?? 0
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "viewModel.listItems[indexPath.row]"
+        //cell.accessibilityNavigationStyle = .combined
+        cell.textLabel?.text = viewModel.usersA?[indexPath.row].surname
+        
         return cell
     }
     

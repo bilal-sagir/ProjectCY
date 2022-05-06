@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+struct InfiniteScrollModel {
+    let name: String
+    let surname: String
+
+    init(title: String, surname: String) {
+        self.name = title
+        self.surname = surname
+    }
+
+    init(user: Result) { // convenience init farkı? struct olması?
+        self.init(title: user.name.first, surname: user.name.last)
+    }
+}

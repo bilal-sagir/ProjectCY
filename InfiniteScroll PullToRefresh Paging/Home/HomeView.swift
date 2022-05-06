@@ -38,7 +38,7 @@ class HomeView: UIViewController {
 }
 
 //MARK: - viewModelDelegation
-extension HomeView: HomeViewModelDelegate { //Dogru yaklasım mı emin değilim
+extension HomeView: HomeViewModelDelegate { //Dogru yaklaşım mı emin değilim. Scalable gibi?
     
     func navigate(to route: ViewRoute) {
         switch route {

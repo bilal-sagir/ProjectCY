@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HomeViewBuilder{
+class HomeViewBuilder{ // Bu kullanım anlamlı mı ?
     static func build() -> HomeView {
         let view = HomeView()
         return view
