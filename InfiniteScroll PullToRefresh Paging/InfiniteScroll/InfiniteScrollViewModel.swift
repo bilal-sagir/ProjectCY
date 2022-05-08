@@ -9,8 +9,9 @@ import Foundation
 
 protocol InfiniteScrollViewModelProtocol{
     var delegate: InfiniteScrollViewModelDelegate? { get set }
+    var pagingRequest: Bool { get set }
     var usersA: [InfiniteScrollModel]? { get set }
-    func viewDidLoad()
+    func fetchData(firstPaging: Bool)
 }
 
 protocol InfiniteScrollViewModelDelegate {
@@ -20,7 +21,8 @@ protocol InfiniteScrollViewModelDelegate {
 
 class InfiniteScrollViewModel: InfiniteScrollViewModelProtocol {
     
-
+    var pagingRequest = true
+    
     var delegate: InfiniteScrollViewModelDelegate?
     
     var service: ClientNetworkServiceProtocol!
@@ -35,16 +37,32 @@ class InfiniteScrollViewModel: InfiniteScrollViewModelProtocol {
         self.service = service
     }
     
-    func fetchData(){
-        service.fetchUsers { usr, err in
-            let users = usr!.results.map(InfiniteScrollModel.init)
-            self.usersA = users
-            print(self.usersA![0].surname)
-            print(self.usersA![0].name)
+    func fetchData(firstPaging: Bool){
+        
+        pagingRequest = true
+        
+        if firstPaging{
+            //if pagingRequest { return }
+            service.fetchUsers { usr, err in
+                guard let usr = usr else { return }
+                let users = usr.results.map(InfiniteScrollModel.init)
+                self.usersA = users
+                
+                //self.pagingRequest = false
+                print(self.usersA?.count)
+                print("first")
+            }
+        } else {
+            if !pagingRequest { return }
+            service.fetchUsers { usr, err in
+                guard let usr = usr else { return }
+                let users = usr.results.map(InfiniteScrollModel.init)
+                self.usersA?.append(contentsOf: users)
+                
+                //self.pagingRequest = false
+                print(self.usersA?.count)
+            }
         }
-    }
-    
-    func viewDidLoad() {
-        fetchData()
+        //self.pagingRequest = true
     }
 }
