@@ -30,6 +30,8 @@
 		9C114A1E282514FE003304CD /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A1D282514FE003304CD /* AppRouter.swift */; };
 		9C114A2028251573003304CD /* HomeViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A1F28251573003304CD /* HomeViewBuilder.swift */; };
 		9C114A22282515E6003304CD /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A21282515E6003304CD /* AppContainer.swift */; };
+		9C83377C282872010087710D /* cellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83377B282872010087710D /* cellView.swift */; };
+		9C83377E2828737B0087710D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83377D2828737B0087710D /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		9C114A1D282514FE003304CD /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		9C114A1F28251573003304CD /* HomeViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewBuilder.swift; sourceTree = "<group>"; };
 		9C114A21282515E6003304CD /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		9C83377B282872010087710D /* cellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellView.swift; sourceTree = "<group>"; };
+		9C83377D2828737B0087710D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 		9C1149FA28245576003304CD /* InfiniteScroll */ = {
 			isa = PBXGroup;
 			children = (
+				9C83377B282872010087710D /* cellView.swift */,
 				9C114A0228245635003304CD /* InfiniteScrollView.swift */,
 				9C114A042824563E003304CD /* InfiniteScrollViewModel.swift */,
 				9C114A062824564A003304CD /* InfiniteScrollModel.swift */,
@@ -163,6 +168,7 @@
 		9C114A24282518BA003304CD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9C83377D2828737B0087710D /* Extensions.swift */,
 				9C114A1D282514FE003304CD /* AppRouter.swift */,
 				9C114A21282515E6003304CD /* AppContainer.swift */,
 				9C1149E32824550B003304CD /* AppDelegate.swift */,
@@ -244,8 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C83377E2828737B0087710D /* Extensions.swift in Sources */,
 				9C114A1328245697003304CD /* ProfileModel.swift in Sources */,
 				9C114A1C282510CE003304CD /* ClientNetworkService.swift in Sources */,
+				9C83377C282872010087710D /* cellView.swift in Sources */,
 				9C114A1E282514FE003304CD /* AppRouter.swift in Sources */,
 				9C1149FF2824561B003304CD /* PullToRefreshViewModel.swift in Sources */,
 				9C114A1A282507F8003304CD /* Endpoints.swift in Sources */,

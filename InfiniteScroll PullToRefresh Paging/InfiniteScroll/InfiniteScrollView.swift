@@ -12,6 +12,8 @@ class InfiniteScrollView: UIViewController {
 
     //MARK: - Variables
     
+    let reuseId = "reuseID"
+    
     var viewModel: InfiniteScrollViewModelProtocol!
     
     let refreshControl = UIRefreshControl()
@@ -29,6 +31,7 @@ class InfiniteScrollView: UIViewController {
         super.viewDidLoad()
         viewModel = InfiniteScrollViewModel(service: appContainer.service)
         
+        tableView.register(cellView.self, forCellReuseIdentifier: reuseId)
         configureUI()
     }
     
@@ -80,8 +83,10 @@ extension InfiniteScrollView: UITableViewDelegate, UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = viewModel.usersA?[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as! cellView
+        //cell.textLabel?.text = viewModel.usersA?[indexPath.row].name
+        let user = viewModel.usersA?[indexPath.row]
+        cell.user = user
         
         return cell
     }
