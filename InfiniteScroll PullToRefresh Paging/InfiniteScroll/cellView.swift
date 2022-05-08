@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class cellView: UITableViewCell {
     
@@ -28,7 +29,7 @@ class cellView: UITableViewCell {
     private let usernameLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 14)
-        label.text = "Username"
+        //label.text = "Username"
         
         return label
     }()
@@ -36,7 +37,7 @@ class cellView: UITableViewCell {
     private let fullnameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14)
-        label.text = "Fullname"
+        //label.text = "Fullname"
         
         return label
     }()
@@ -62,7 +63,7 @@ class cellView: UITableViewCell {
     func configure(){
         guard let user = user else { return }
         
-        //profileImageView.sd_setImage(with: user.profileImageUrl)
+        profileImageView.sd_setImage(with: URL(string: user.profileImageString))
         
         usernameLabel.text = user.name
         fullnameLabel.text = user.surname

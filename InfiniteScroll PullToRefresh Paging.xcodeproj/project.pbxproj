@@ -32,6 +32,7 @@
 		9C114A22282515E6003304CD /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C114A21282515E6003304CD /* AppContainer.swift */; };
 		9C83377C282872010087710D /* cellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83377B282872010087710D /* cellView.swift */; };
 		9C83377E2828737B0087710D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83377D2828737B0087710D /* Extensions.swift */; };
+		9C833781282878F10087710D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9C833780282878F10087710D /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C833781282878F10087710D /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +198,9 @@
 			dependencies = (
 			);
 			name = "InfiniteScroll PullToRefresh Paging";
+			packageProductDependencies = (
+				9C833780282878F10087710D /* SDWebImage */,
+			);
 			productName = "InfiniteScroll PullToRefresh Paging";
 			productReference = 9C1149E02824550B003304CD /* InfiniteScroll PullToRefresh Paging.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 9C1149D72824550B003304CD;
+			packageReferences = (
+				9C83377F282878F00087710D /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 9C1149E12824550B003304CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -484,6 +492,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C83377F282878F00087710D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C833780282878F10087710D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C83377F282878F00087710D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9C1149D82824550B003304CD /* Project object */;
 }
